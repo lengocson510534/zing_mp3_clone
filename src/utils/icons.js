@@ -4,10 +4,10 @@ import { HiOutlineChartPie, HiArrowRight, HiArrowLeft, HiOutlineDotsHorizontal }
 import { FiSearch } from 'react-icons/fi'
 import { FaUser } from 'react-icons/fa'
 import { AiOutlineHeart } from 'react-icons/ai'
-import { CiRepeat } from 'react-icons/ci'
-import { BiSkipNext, BiSkipPrevious } from 'react-icons/bi'
+import { CiRepeat, CiMusicNote1 } from 'react-icons/ci'
+import { BiSkipNext, BiSkipPrevious, BiSortAlt2 } from 'react-icons/bi'
 import { TfiControlShuffle } from 'react-icons/tfi'
-import { BsFillPlayFill, BsPause } from 'react-icons/bs'
+import { BsFillPlayFill, BsPause, BsDot } from 'react-icons/bs'
 
 const icons = {
     MdOutlineLibraryMusic,
@@ -26,6 +26,9 @@ const icons = {
     TfiControlShuffle,
     BsFillPlayFill,
     BsPause,
+    CiMusicNote1,
+    BsDot,
+    BiSortAlt2
 }
 
 export default icons

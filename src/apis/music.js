@@ -29,7 +29,7 @@ export const apiGetDetailSong = (songId) => new Promise(async (resolve, reject) 
 export const apiGetDetailPlaylist = (playlistId) => new Promise(async (resolve, reject) => {
     try {
         const response = await axios({
-            url: '/getdetailplaylist',
+            url: '/detailplaylist',
             method: 'get',
             params: { id: playlistId }
         })

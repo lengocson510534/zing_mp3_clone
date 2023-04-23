@@ -11,6 +11,9 @@ module.exports = {
         'main-300': '#CED9D9',
         'main-400': '#C1D7D8',
         'main-highlight': '#0F8080',
+        'gray-69': '#696969',
+        'gray-32': '#32323d',
+        'gray-c2': '#ADC1C2'
       },
       colors: {
         'main-100': '#E7EBEB',
@@ -18,6 +21,9 @@ module.exports = {
         'main-300': '#CED9D9',
         'main-400': '#C1D7D8',
         'main-highlight': '#0F8080',
+        'gray-69': '#696969',
+        'gray-32': '#32323d',
+        'gray-c2': '#ADC1C2'
       },
       keyframes: {
         'slide-right': {

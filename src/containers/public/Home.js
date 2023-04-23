@@ -5,9 +5,6 @@ const Home = () => {
 
     return (
         <div className='overflow-y-auto px-[59px]'>
-            <div className='h-[70px] flex items-center'>
-                <Header />
-            </div>
             <Slider />
         </div>
     )

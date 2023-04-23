@@ -3,12 +3,14 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getArrSlider } from '../utils/fn'
 
 import * as actions from '../store/actions'
+import { useNavigate } from 'react-router-dom'
 
 
 const Slider = () => {
 
     const { banner } = useSelector(state => state.app)
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     useEffect(() => {
         const sliderEls = document.getElementsByClassName('slider-item')
@@ -53,14 +55,17 @@ const Slider = () => {
         if (item?.type === 1) {
             dispatch(actions.setCurSongId(item.encodeId))
             dispatch(actions.play(true))
+            dispatch(actions.fetchDetailAlbum(item.encodeId))
+            console.log('item', item)
         }
         else if (item?.type === 4) {
-            console.log(item)
+            const albumPath = item?.link.split('.')[0]
+            navigate(albumPath)
         }
     }
 
     return (
-        <div className='flex gap-8 w-full overflow-hidden pt-8'>
+        <div className='flex gap-8 w-full overflow-hidden'>
             {banner?.map((item, index) => (
                 <img
                     src={item.banner}
