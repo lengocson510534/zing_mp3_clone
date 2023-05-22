@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const Home = () => {
 
   const { chill, artistFavorite, artistTrending, top100, albumhot, weekChart, seasonTheme } = useSelector(state => state.app)
-  console.log("seasonTheme::", seasonTheme)
+
   return (
     <div className='overflow-y-auto px-[59px] pb-10'>
       <Slider />

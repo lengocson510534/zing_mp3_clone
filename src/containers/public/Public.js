@@ -24,7 +24,7 @@ const Public = () => {
                         </Scrollbars>
                     </div>
                 </div>
-                <div className={`${activeSidebarRight ? 'flex' : 'hidden'} absolute z-[99] right-0 top-0 bottom-0 w-[330px] flex-none bg-main-300 animate-slide-left shadow-xl`}>
+                <div className={`${activeSidebarRight ? 'flex' : 'hidden'} absolute z-[99] right-0 top-0 bottom-0 w-[330px] flex-none bg-main-300 animate-slide-left shadow-xl h-screen`}>
                     <SidebarRight />
                 </div>
             </div>

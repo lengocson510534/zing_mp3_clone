@@ -17,6 +17,7 @@ module.exports = {
         'overlay': 'rgba(0, 0, 0, 0.3)',
         'gray-220': 'rgba(220,220,220,0.5)',
         'purple-42': '#42195D',
+        'grey-4d': '#ffffff4d',
       },
       colors: {
         'main-100': '#E7EBEB',
@@ -31,6 +32,7 @@ module.exports = {
         'overlay': 'rgba(0, 0, 0, 0.3)',
         'gray-220': 'rgba(220,220,220,0.5)',
         'purple-42': '#42195D',
+        'grey-4d': '#ffffff4d',
       },
       keyframes: {
         'slide-right': {
@@ -79,6 +81,10 @@ module.exports = {
       },
       fontFamily: {
         'roboto': 'Roboto, sans-serif',
+      },
+      boxShadow: {
+        'btn': '0 1px 3px 0 rgba(0,0,0,.07);',
+        'menu-right': '0 1px 0 rgba(0,0,0,0.3),0 1px 6px rgba(0,0,0,0.3),inset 0 1px 1px hsla(0,0%,100%,0.3);'
       }
     },
   },

@@ -4,14 +4,11 @@ import 'moment/locale/vi'
 import { useDispatch } from 'react-redux'
 import * as actions from '../store/actions'
 
-const SongItem = ({ thumbnail, title, artists, releaseDate, sid, order, percent, styled }) => {
-
+const SongItem = ({ thumbnail, title, artists, releaseDate, sid, order, percent, styled, avatarSize, styledArtist }) => {
   const dispatch = useDispatch()
 
-  console.log('percent::', percent)
-
   return (
-    <div className={`w-full flex-auto items-center flex gap-[20px] rounded-md ${order ? 'justify-between text-white bg-[rgba(168,148,181,0.1)] hover:bg-[#ffffff4d] py-[10px] px-[15px]' : styled || `text-inherit p-[10px] hover:bg-main-200}`}`}>
+    <div className={`w-full flex-auto items-center flex gap-[20px] rounded-md ${order ? 'justify-between text-white bg-[rgba(168,148,181,0.1)] hover:bg-[#ffffff4d] py-[10px] px-[15px]' : styled || `text-inherit p-[10px] hover:bg-main-200`}`}>
       <div className='flex items-center gap-[15px]'>
         {order &&
           <span
@@ -25,7 +22,7 @@ const SongItem = ({ thumbnail, title, artists, releaseDate, sid, order, percent,
             dispatch(actions.play(true))
           }}
           src={thumbnail} alt="thumbnail"
-          className='w-[60px] h-[60px] object-cover rounded-md cursor-pointer'
+          className={`${avatarSize === 'sm' ? 'w-10 h-10' : 'w-[60px] h-[60px]'}  object-cover rounded-md cursor-pointer`}
         />
         <div className='flex flex-col mt-[3px] overflow-hidden'>
           <span
@@ -37,7 +34,7 @@ const SongItem = ({ thumbnail, title, artists, releaseDate, sid, order, percent,
             {artists?.map((item, index) => (
               <span
                 key={item.id}
-                className={`${order ? 'text-[#a592b3]' : 'text-gray-69'} text-xs hover:text-main-highlight hover:underline hover:cursor-pointer tracking-wide leading-5`}>
+                className={`${order ? 'text-[#a592b3]' : styledArtist || 'text-gray-69'} text-xs hover:text-main-highlight hover:underline hover:cursor-pointer tracking-wide leading-5`}>
                 {item.name}
                 {index < artists.length - 1 ? ',' : ''}
               </span>

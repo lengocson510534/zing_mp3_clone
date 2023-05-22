@@ -23,6 +23,7 @@ const Album = () => {
   const { isPlaying } = useSelector(state => state.music)
 
   useEffect(() => {
+    dispatch(actions.setCurAlbumId(pid))
     const fetchDetailAlbum = async () => {
       const response = await apis.apiGetDetailPlaylist(pid)
       setLoading(false)
@@ -30,14 +31,12 @@ const Album = () => {
         setPlaylistData(response.data?.data)
         dispatch(actions.setPlaylist(response?.data?.data?.song?.items))
       }
-      console.log(response)
     }
     fetchDetailAlbum()
   }, [pid])
 
   useEffect(() => {
     if (location.state?.playAlbum) {
-      console.log("vao day 11")
       const randomSong = Math.round(Math.random() * playlistData?.song?.items?.length) - 1
       dispatch(actions.setCurSongId(playlistData?.song?.items[randomSong]?.encodeId))
       dispatch(actions.play(true))

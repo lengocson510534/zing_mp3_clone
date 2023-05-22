@@ -5,7 +5,6 @@ import SongItem from './SongItem'
 
 const NewRelease = () => {
   const { newRelease } = useSelector(state => state.app)
-  console.log("new release", newRelease)
   const [isActive, setIsActive] = useState(0)
   const [songs, setSongs] = useState([])
 
