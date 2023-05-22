@@ -34,7 +34,6 @@ const ListSongItem = ({ songData, streamingStatus }) => {
                             VIP
                         </span>
                     </span>
-                    <br />
                     <span className={`${streamingStatus === 2 ? 'text-[#878B90]' : 'text-gray-69'} cursor-pointer text-xs leading-[1.33] hover:text-main-highlight hover:underline `}>
                         {songData?.artistsNames}
                     </span>

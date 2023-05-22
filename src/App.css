@@ -33,4 +33,47 @@ body {
   font-size: 16px;
   line-height: 1;
   color: #32323b;
+  overflow-x: hidden;
+}
+
+.input-volume {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 3px; /* Specified height */
+  background: #adc1c2 !important; /* Grey background */
+  outline: none; /* Remove outline */
+  /* opacity: 1; */
+  -webkit-transition: 0.2s; /* 0.2 seconds transition on hover */
+  transition: opacity 0.2s;
+}
+
+.input-volume::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  background: #04aa6d;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.text-gradient {
+  background: radial-gradient(
+      50% 124.93% at 95.86% -10%,
+      #3efad9 0,
+      hsla(0, 0%, 100%, 0) 100%
+    ),
+    linear-gradient(91.56deg, #ff9357 1.54%, #9100ff 98.71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.is-number-1 {
+  -webkit-text-stroke: 1px #4a90e2;
+}
+.is-number-2 {
+  -webkit-text-stroke: 1px #50e3c2;
+}
+.is-number-3 {
+  -webkit-text-stroke: 1px #e35050;
 }

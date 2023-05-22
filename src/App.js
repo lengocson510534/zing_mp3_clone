@@ -1,6 +1,6 @@
 import './App.css';
 import { useSelector } from 'react-redux';
-import { Album, Home, Login, Public } from './containers/public'
+import { Album, Home, Login, Public, WeekRank, ZingChart } from './containers/public'
 import { Routes, Route } from 'react-router-dom';
 import path from './utils/path';
 import { useEffect } from 'react';
@@ -25,6 +25,9 @@ function App() {
           <Route path={path.LOGIN} element={<Login />} />
           <Route path={path.ALBUM__TITLE__PID} element={<Album />} />
           <Route path={path.PLAYLIST__TITLE__PID} element={<Album />} />
+          <Route path={path.WEEKRANK__TITLE_PID} element={<WeekRank />} />
+          <Route path={path.ZING_CHART} element={<ZingChart />} />
+
 
           <Route path={path.STAR} element={<Home />} />
         </Route>
