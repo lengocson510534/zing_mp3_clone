@@ -20,6 +20,7 @@ const SongItem = ({ thumbnail, title, artists, releaseDate, sid, order, percent,
           onClick={() => {
             dispatch(actions.setCurSongId(sid))
             dispatch(actions.play(true))
+            dispatch(actions.setRecent({ thumbnail, title, sid, artists }))
           }}
           src={thumbnail} alt="thumbnail"
           className={`${avatarSize === 'sm' ? 'w-10 h-10' : 'w-[60px] h-[60px]'}  object-cover rounded-md cursor-pointer`}
@@ -34,7 +35,7 @@ const SongItem = ({ thumbnail, title, artists, releaseDate, sid, order, percent,
             {artists?.map((item, index) => (
               <span
                 key={item.id}
-                className={`${order ? 'text-[#a592b3]' : styledArtist || 'text-gray-69'} text-xs hover:text-main-highlight hover:underline hover:cursor-pointer tracking-wide leading-5`}>
+                className={`text-xs hover:text-main-highlight hover:underline hover:cursor-pointer tracking-wide leading-5 ${order ? 'text-[#a592b3]' : styledArtist || 'text-gray-69'} `}>
                 {item.name}
                 {index < artists.length - 1 ? ',' : ''}
               </span>

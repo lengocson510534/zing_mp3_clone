@@ -16,6 +16,7 @@ const ListSongItem = ({ songData, streamingStatus }) => {
                 if (streamingStatus === 1) {
                     dispatch(actions.setCurSongId(songData?.encodeId))
                     dispatch(actions.play(true))
+                    dispatch(actions.setRecent({ thumbnail: songData?.thumbnail, title: songData?.title, sid: songData?.encodeId, artists: songData?.artists }))
                 }
             }}
         >

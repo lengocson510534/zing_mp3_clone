@@ -106,6 +106,7 @@ const ChartSection = () => {
         <div className='w-full flex-4 flex flex-col gap-3'>
           {rank?.filter((item, index) => index < 3)?.map((item, index) => (
             <SongItem
+              key={index}
               thumbnail={item.thumbnail}
               title={item.title}
               artists={item.artists}

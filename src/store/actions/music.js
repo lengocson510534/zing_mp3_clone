@@ -21,7 +21,10 @@ export const setPlaylist = (songs) => ({
     type: actionTypes.PLAYLIST,
     songs
 })
-
+export const setRecent = (data) => ({
+    type: actionTypes.SET_RECENT,
+    data
+})
 
 export const fetchDetailAlbum = (pid) => async (dispatch) => {
     try {
